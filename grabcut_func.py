@@ -56,14 +56,10 @@ class grabcut:
 		# init GMM
 		self.init_GMM()
         
-        # calculate smoothness term
+		# calculate smoothness term
 		self.calculate_smoothness_term()
 		
-        #pr_fg_num_last=np.sum(np.array(self.mask[self.mask==DRAW_PR_FG['val']], dtype=np.int))
-		#pr_bg_num_last=np.sum(np.array(self.mask[self.mask==DRAW_PR_BG['val']], dtype=np.int))
-
 		for i in range(1):
-
 			# train GMM
 			self.train_GMM()
 
@@ -75,7 +71,7 @@ class grabcut:
 	def draw_mask(self):
 		for i in range(1):
 			# calculate smoothness term
-			#self.calculate_smoothness_term()
+			self.calculate_smoothness_term()
 
 			# train GMM
 			self.train_GMM()
